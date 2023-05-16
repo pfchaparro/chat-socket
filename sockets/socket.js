@@ -18,15 +18,15 @@ io.on('connection', client => {
     const [valido, uid] = comprobarJWT(client.handshake.headers['x-token']);
 
     // verificar autenticacion
-    if (!valido) {
-        return client.disconnect();
-    }
+    // if (!valido) {
+    //     return client.disconnect();
+    // }
 
     // cliente autenticado
-    usuarioConectado(uid);
+    // usuarioConectado(uid);
 
     // ingresar al usuario a una sala especifica
-    client.join(uid);
+    // client.join(uid);
 
     // escuchar del cliente mensaje-personal
     client.on('mensaje-persona', (payload) => {
